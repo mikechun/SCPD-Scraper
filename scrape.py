@@ -41,9 +41,7 @@ if __name__ == '__main__':
   linktypes = {}
   for link in br.links(text="WMP"):
     links.append(re.search(r"'(.*)'",link.url).group(1))
-    print link
 
-  print response
   videos = []
   # These are done serially purely just to not look suspicious, we could probably parallelize this as well
   for link in links:
